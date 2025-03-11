@@ -13,6 +13,13 @@ export const ParticipantFlags = {
       male: 'male',
       other: 'other',
     },
+  },
+  birthdate: {
+    key: 'birthdate',
+    from: {
+      itemKey: 'intake.Q2',
+      slotKey: 'rg.1',
+    }
   }
 }
 
