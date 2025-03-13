@@ -48,8 +48,19 @@ const handleIntake = StudyEngine.ifThen(
         StudyEngine.participantActions.updateFlag(ParticipantFlags.gender.key, ParticipantFlags.gender.values.other),
       )
     )
+  ),
+  // Birthdate flag:
+  StudyEngine.participantActions.updateFlag(
+    ParticipantFlags.birthdate.key,
+    StudyEngine.getResponseValueAsNum(
+      ParticipantFlags.birthdate.from.itemKey,
+      ParticipantFlags.birthdate.from.slotKey
+    )
   )
 )
+
+const studyCodeListKeyForSwab = 'swabCodes';
+const linkingCodeKeyForSwab = 'swabCode';
 
 const handleWeekly = StudyEngine.ifThen(
   StudyEngine.checkSurveyResponseKey(surveyKeys.weekly),
@@ -73,6 +84,52 @@ const handleWeekly = StudyEngine.ifThen(
       ParticipantFlags.hasOnGoingSymptoms.values.no
     )
   ),
+
+  // Swab logic
+  StudyEngine.ifThen(
+    StudyEngine.and(
+      // lives in england
+      StudyEngine.singleChoice.any('weekly.Swab.Loc', '1'),
+      // older than 18 years
+      StudyEngine.gt(
+        StudyEngine.timestampWithOffset({ years: -18 }),
+        StudyEngine.participantState.getParticipantFlagValueAsNum(ParticipantFlags.birthdate.key)
+      )
+    ),
+    // Draw swab code
+    StudyEngine.participantActions.linkingCodes.drawFromStudyCodeList(
+      studyCodeListKeyForSwab,
+      linkingCodeKeyForSwab,
+    ),
+    StudyEngine.if(
+      StudyEngine.participantState.linkingCode.has(linkingCodeKeyForSwab),
+      // If the participant has a swab code
+      StudyEngine.do(
+        StudyEngine.participantActions.messages.add(
+          'invite-for-swab',
+          StudyEngine.timestampWithOffset({ days: 0 }),
+        ),
+        StudyEngine.participantActions.reports.init(
+          studyCodeListKeyForSwab,
+        ),
+        StudyEngine.participantActions.reports.updateData(
+          studyCodeListKeyForSwab,
+          linkingCodeKeyForSwab,
+          StudyEngine.participantState.linkingCode.get(linkingCodeKeyForSwab),
+        )
+      ),
+      // If the participant does not have a swab code
+      StudyEngine.do(
+        StudyEngine.participantActions.messages.add(
+          'no-swab-code',
+          StudyEngine.timestampWithOffset({ days: 0 }),
+        ),
+      )
+    )
+  )
+
+
+
 )
 
 
