@@ -38,3 +38,41 @@ export const gen_survey_condition_for_swab_question = () => {
     ]
   }
 }
+
+export const move_weekly_to_optional = () => {
+  return {
+    name: 'move_weekly_to_optional',
+    rules: [
+      StudyEngine.ifThen(
+        StudyEngine.participantState.hasSurveyKeyAssigned('weekly'),
+        StudyEngine.participantActions.assignedSurveys.remove(
+          'weekly',
+          'all'
+        ),
+        StudyEngine.participantActions.assignedSurveys.add(
+          'weekly',
+          'optional'
+        )
+      )
+    ]
+  }
+}
+
+export const move_weekly_to_prio = () => {
+  return {
+    name: 'move_weekly_to_prio',
+    rules: [
+      StudyEngine.ifThen(
+        StudyEngine.participantState.hasSurveyKeyAssigned('weekly'),
+        StudyEngine.participantActions.assignedSurveys.remove(
+          'weekly',
+          'all'
+        ),
+        StudyEngine.participantActions.assignedSurveys.add(
+          'weekly',
+          'prio'
+        )
+      )
+    ]
+  }
+}
