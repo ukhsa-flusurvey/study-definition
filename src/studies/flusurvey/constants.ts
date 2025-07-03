@@ -4,3 +4,7 @@ export const surveyKeys = {
   intake: 'intake'
 }
 
+export const messageTypes = {
+  inviteForSwab: 'invite-for-swab',
+  noSwabCode: 'no-swab-code',
+}

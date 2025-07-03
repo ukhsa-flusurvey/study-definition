@@ -2,7 +2,7 @@ import { Expression } from "survey-engine/data_types";
 import { StudyRules } from "case-editor-tools/types/studyRules";
 import { StudyEngine } from "case-editor-tools/expression-utils/studyEngineExpressions";
 import { ParticipantFlags } from "./participantFlags";
-import { surveyKeys } from "./constants";
+import { messageTypes, surveyKeys } from "./constants";
 
 /**
  * Define what should happen, when persons enter the study first time:
@@ -109,7 +109,7 @@ const handleWeekly = StudyEngine.ifThen(
       // If the participant has a swab code
       StudyEngine.do(
         StudyEngine.participantActions.messages.add(
-          'invite-for-swab',
+          messageTypes.inviteForSwab,
           StudyEngine.timestampWithOffset({ days: 0 }),
         ),
         StudyEngine.participantActions.reports.init(
@@ -124,7 +124,7 @@ const handleWeekly = StudyEngine.ifThen(
       // If the participant does not have a swab code
       StudyEngine.do(
         StudyEngine.participantActions.messages.add(
-          'no-swab-code',
+          messageTypes.noSwabCode,
           StudyEngine.timestampWithOffset({ days: 0 }),
         ),
       )
