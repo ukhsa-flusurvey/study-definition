@@ -119,7 +119,11 @@ const handleWeekly = StudyEngine.ifThen(
           studyCodeListKeyForSwab,
           linkingCodeKeyForSwab,
           StudyEngine.participantState.linkingCode.get(linkingCodeKeyForSwab),
-        )
+        ),
+        StudyEngine.participantActions.updateFlag(
+          ParticipantFlags.lastSwabCodeAssignedAt.key,
+          StudyEngine.timestampWithOffset({ days: 0 }),
+        ),
       ),
       // If the participant does not have a swab code
       StudyEngine.do(
@@ -130,9 +134,6 @@ const handleWeekly = StudyEngine.ifThen(
       )
     )
   )
-
-
-
 )
 
 

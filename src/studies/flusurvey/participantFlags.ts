@@ -20,6 +20,9 @@ export const ParticipantFlags = {
       itemKey: 'intake.Q2',
       slotKey: 'rg.1',
     }
+  },
+  lastSwabCodeAssignedAt: {
+    key: 'lastSwabCodeAssignedAt',
   }
 }
 
