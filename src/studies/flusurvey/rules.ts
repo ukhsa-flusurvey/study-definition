@@ -13,7 +13,7 @@ const entryRules: Expression[] = [
 
 const genderQuestionKey = 'intake.Q1';
 
-const IS_SUMMER_PAUSE = true;
+const IS_SUMMER_PAUSE = false;
 
 
 /**
@@ -61,7 +61,7 @@ const handleIntake = StudyEngine.ifThen(
   )
 )
 
-const studyCodeListKeyForSwab = 'swabCodes';
+const studyCodeListKeyForSwab = 'swabcodes';
 const linkingCodeKeyForSwab = 'swabCode';
 
 const handleWeekly = StudyEngine.ifThen(
