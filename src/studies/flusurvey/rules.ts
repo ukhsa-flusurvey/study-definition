@@ -136,11 +136,25 @@ const handleWeekly = StudyEngine.ifThen(
   )
 )
 
+const handleFluSSPilotEntry = StudyEngine.ifThen(
+  StudyEngine.checkSurveyResponseKey(surveyKeys.flussPilotEntry),
+  // then do:
+  StudyEngine.if(
+    StudyEngine.singleChoice.any(
+      `${surveyKeys.flussPilotEntry}.Join`,
+      '1'
+    ),
+    StudyEngine.do(
+      StudyEngine.participantActions.updateFlag(ParticipantFlags.joinedFluSSPilotAt.key, StudyEngine.timestampWithOffset({ days: 0 })),
+    ),
+  )
+)
 
 
 const submitRules: Expression[] = [
   handleIntake,
   handleWeekly,
+  handleFluSSPilotEntry,
 ];
 
 const timerRules: Expression[] | undefined = undefined

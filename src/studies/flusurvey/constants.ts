@@ -1,7 +1,8 @@
 
 export const surveyKeys = {
   weekly: 'weekly',
-  intake: 'intake'
+  intake: 'intake',
+  flussPilotEntry: 'fluss-pilot-entry',
 }
 
 export const messageTypes = {
