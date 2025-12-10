@@ -21,6 +21,9 @@ export const ParticipantFlags = {
       slotKey: 'rg.1',
     }
   },
+  countryOfResidence: {
+    key: 'countryOfResidence',
+  },
   lastSwabCodeAssignedAt: {
     key: 'lastSwabCodeAssignedAt',
   },

@@ -58,6 +58,14 @@ const handleIntake = StudyEngine.ifThen(
       ParticipantFlags.birthdate.from.itemKey,
       ParticipantFlags.birthdate.from.slotKey
     )
+  ),
+  // Country of residence flag:
+  StudyEngine.participantActions.updateFlag(
+    ParticipantFlags.countryOfResidence.key,
+    StudyEngine.getSelectedKeys(
+      'intake.MY3',
+      'rg.scg'
+    )
   )
 )
 
@@ -90,15 +98,7 @@ const handleWeekly = StudyEngine.ifThen(
 
   // Swab logic
   StudyEngine.ifThen(
-    StudyEngine.and(
-      // lives in england
-      StudyEngine.singleChoice.any('weekly.Swab.Loc', '1'),
-      // older than 18 years
-      StudyEngine.gt(
-        StudyEngine.timestampWithOffset({ years: -18 }),
-        StudyEngine.participantState.getParticipantFlagValueAsNum(ParticipantFlags.birthdate.key)
-      )
-    ),
+    StudyEngine.singleChoice.any('weekly.Swab.Consent', '1'),
     // Draw swab code
     StudyEngine.participantActions.linkingCodes.drawFromStudyCodeList(
       studyCodeListKeyForSwab,
