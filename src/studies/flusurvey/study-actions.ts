@@ -77,17 +77,17 @@ export const move_weekly_to_prio = () => {
   }
 }
 
-export const send_message_to_joined_flu_ss_pilot = () => {
-  return {
-    name: 'send_message_to_joined_flu_ss_pilot',
-    rules: [
-      StudyEngine.ifThen(
-        StudyEngine.participantState.hasParticipantFlagKey(ParticipantFlags.joinedFluSSPilotAt.key),
-        StudyEngine.participantActions.messages.add(
-          '<message-key>',
-          StudyEngine.timestampWithOffset({ days: 0 }),
-        )
-      )
-    ]
-  }
-}
+// export const send_message_to_joined_flu_ss_pilot = () => {
+//   return {
+//     name: 'send_message_to_joined_flu_ss_pilot',
+//     rules: [
+//       StudyEngine.ifThen(
+//         StudyEngine.participantState.hasParticipantFlagKey(ParticipantFlags.joinedFluSSPilotAt.key),
+//         StudyEngine.participantActions.messages.add(
+//           '<message-key>',
+//           StudyEngine.timestampWithOffset({ days: 0 }),
+//         )
+//       )
+//     ]
+//   }
+// }
