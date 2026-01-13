@@ -27,8 +27,5 @@ export const ParticipantFlags = {
   lastSwabCodeAssignedAt: {
     key: 'lastSwabCodeAssignedAt',
   },
-  joinedFluSSPilotAt: {
-    key: 'joinedFluSSPilotAt',
-  }
 }
 
