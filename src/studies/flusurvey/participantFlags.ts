@@ -27,5 +27,12 @@ export const ParticipantFlags = {
   lastSwabCodeAssignedAt: {
     key: 'lastSwabCodeAssignedAt',
   },
+  hasIntakeThisSeason: {
+    key: 'hasIntakeThisSeason',
+    values: {
+      no: '0',
+      yes: '1'
+    }
+  },
 }
 

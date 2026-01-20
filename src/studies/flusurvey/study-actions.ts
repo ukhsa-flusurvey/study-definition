@@ -77,6 +77,24 @@ export const move_weekly_to_prio = () => {
   }
 }
 
+export const init_has_intake_this_season = () => {
+  return {
+    name: 'init_has_intake_this_season',
+    rules: [
+      StudyEngine.participantActions.updateFlag(ParticipantFlags.hasIntakeThisSeason.key, ParticipantFlags.hasIntakeThisSeason.values.yes)
+    ]
+  }
+}
+
+export const remove_has_intake_flag_this_season = () => {
+  return {
+    name: 'remove_has_intake_flag_this_season',
+    rules: [
+      StudyEngine.participantActions.removeFlag(ParticipantFlags.hasIntakeThisSeason.key)
+    ]
+  }
+}
+
 // export const send_message_to_joined_flu_ss_pilot = () => {
 //   return {
 //     name: 'send_message_to_joined_flu_ss_pilot',
