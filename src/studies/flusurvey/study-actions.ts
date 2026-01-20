@@ -2,6 +2,7 @@ import { StudyEngine } from "case-editor-tools/expression-utils/studyEngineExpre
 import { SurveyEngine } from 'case-editor-tools/surveys/survey-engine-expressions';
 import { Expression } from "survey-engine/data_types"
 import { ParticipantFlags } from "./participantFlags";
+import { surveyKeys } from "./constants";
 
 export const gen_action_add_age_flag = () => {
   const rules: Expression[] = [
@@ -72,6 +73,39 @@ export const move_weekly_to_prio = () => {
           'weekly',
           'prio'
         )
+      )
+    ]
+  }
+}
+
+export const init_has_intake_this_season = () => {
+  return {
+    name: 'init_has_intake_this_season',
+    rules: [
+      StudyEngine.ifThen(
+        StudyEngine.lt(
+          StudyEngine.timestampWithOffset(
+            { days: 0 },
+            1759276800
+          ),
+          StudyEngine.participantState.getLastSubmissionDate(surveyKeys.intake),
+        ),
+        StudyEngine.participantActions.updateFlag(ParticipantFlags.hasIntakeThisSeason.key, ParticipantFlags.hasIntakeThisSeason.values.yes),
+      )
+    ]
+  }
+}
+
+export const remove_has_intake_flag_this_season = () => {
+  return {
+    name: 'remove_has_intake_flag_this_season',
+    rules: [
+      StudyEngine.ifThen(
+        StudyEngine.gt(
+          StudyEngine.timestampWithOffset({ days: -4 * 7 }),
+          StudyEngine.participantState.getLastSubmissionDate(surveyKeys.intake),
+        ),
+        StudyEngine.participantActions.removeFlag(ParticipantFlags.hasIntakeThisSeason.key)
       )
     ]
   }
