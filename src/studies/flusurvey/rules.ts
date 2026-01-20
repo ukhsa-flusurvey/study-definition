@@ -66,6 +66,11 @@ const handleIntake = StudyEngine.ifThen(
       'intake.MY3',
       'rg.scg'
     )
+  ),
+
+  StudyEngine.participantActions.updateFlag(
+    ParticipantFlags.hasIntakeThisSeason.key,
+    ParticipantFlags.hasIntakeThisSeason.values.yes
   )
 )
 
