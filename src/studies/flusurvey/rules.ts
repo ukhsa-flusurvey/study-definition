@@ -13,7 +13,7 @@ const entryRules: Expression[] = [
 
 const genderQuestionKey = 'intake.Q1';
 
-const IS_SUMMER_PAUSE = false;
+const IS_SUMMER_PAUSE = true;
 
 
 /**
