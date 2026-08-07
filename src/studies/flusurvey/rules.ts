@@ -141,9 +141,17 @@ const handleWeekly = StudyEngine.ifThen(
   )
 )
 
+const handleSwabbing = StudyEngine.ifThen(
+  StudyEngine.checkSurveyResponseKey(surveyKeys.weekly),
+  // then do:
+
+);
+
+
 const submitRules: Expression[] = [
   handleIntake,
   handleWeekly,
+  handleSwabbing,
 ];
 
 const timerRules: Expression[] | undefined = undefined

@@ -2,6 +2,7 @@
 export const surveyKeys = {
   weekly: 'weekly',
   intake: 'intake',
+  swabbing: 'swabbing'
 }
 
 export const messageTypes = {

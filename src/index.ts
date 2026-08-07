@@ -8,19 +8,13 @@ const studies: Study[] = [
   FluSurveyStudy,
 ];
 
-const readStudyKey = () => {
-  if (process.argv.length < 3) {
-    Logger.criticalError('Not enough arguments provided.')
-    process.exit(-1)
-  }
-  const args = process.argv.slice(2);
-  const studyKeyArg = args.filter(arg => arg.includes("study="));
-  if (!studyKeyArg || studyKeyArg.length < 1) {
-    Logger.criticalError('Argument "study=<studyKey> is missing.')
-    process.exit(1)
-  }
+const defaultStudyKey = 'flusurvey';
 
-  return studyKeyArg[0].replace('study=', '');
+const readStudyKey = () => {
+  const args = process.argv.slice(2);
+  const studyKeyArg = args.find(arg => arg.startsWith('study='));
+
+  return studyKeyArg?.replace('study=', '') || defaultStudyKey;
 }
 
 const studyKey = readStudyKey();
