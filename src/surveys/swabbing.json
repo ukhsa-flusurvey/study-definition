@@ -1,0 +1,321 @@
+{
+  "availableFor": "active_participants",
+  "props": {
+    "name": [
+      {
+        "code": "en",
+        "parts": [
+          {
+            "dtype": "",
+            "str": "Self-swabbing study"
+          }
+        ]
+      }
+    ],
+    "description": [
+      {
+        "code": "en",
+        "parts": [
+          {
+            "dtype": "",
+            "str": "Find out more about taking part in a free postal respiratory swab test."
+          }
+        ]
+      }
+    ],
+    "typicalDuration": [
+      {
+        "code": "en",
+        "parts": [
+          {
+            "dtype": "",
+            "str": "this will take less than 1 minute to complete"
+          }
+        ]
+      }
+    ]
+  },
+  "surveyDefinition": {
+    "key": "swabbing",
+    "items": [
+      {
+        "key": "swabbing.info",
+        "metadata": {
+          "editorItemColor": "#a16207"
+        },
+        "components": {
+          "role": "root",
+          "order": {
+            "name": "sequential"
+          },
+          "items": [
+            {
+              "key": "1Cm",
+              "role": "markdown",
+              "content": [
+                {
+                  "code": "nl",
+                  "parts": [
+                    {
+                      "str": "### Swabbing survey\n\nThank you for submitting your weekly symptoms questionnaire. To support our public health surveillance, UKHSA are offering eligible participants with specific symptoms the chance for a free postal respiratory swab test for a range of respiratory viruses. You have been directed to this page because you meet this respiratory swab test eligibility criteria based on your survey responses.\n\nThis respiratory swab test involves taking a sample from the back of your throat and from the inside of your nose collected using the same swab. Please note that currently self-swabbing is only open to participants over 18 years old and who live in England.\n\n \n\nIf you are reporting symptoms on behalf of someone else in your household, please answer these based on their details, and make sure to check that they are willing to participate."
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "key": "swabbing.interest",
+        "metadata": {
+          "editorItemColor": "#404040"
+        },
+        "components": {
+          "role": "root",
+          "order": {
+            "name": "sequential"
+          },
+          "items": [
+            {
+              "role": "title",
+              "content": [
+                {
+                  "code": "nl",
+                  "parts": [
+                    {
+                      "str": "I am interested in more information on this self-swabbing study"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "rg",
+              "role": "responseGroup",
+              "items": [
+                {
+                  "key": "scg",
+                  "role": "singleChoiceGroup",
+                  "items": [
+                    {
+                      "key": "yes",
+                      "role": "option",
+                      "content": [
+                        {
+                          "code": "nl",
+                          "parts": [
+                            {
+                              "str": "Yes"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "key": "no",
+                      "role": "option",
+                      "content": [
+                        {
+                          "code": "nl",
+                          "parts": [
+                            {
+                              "str": "No"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "order": {
+                    "name": "sequential"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "validations": [
+          {
+            "key": "4zq",
+            "type": "hard",
+            "rule": {
+              "name": "hasResponse",
+              "data": [
+                {
+                  "str": "swabbing.interest"
+                },
+                {
+                  "str": "rg"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "key": "swabbing.terms",
+        "metadata": {
+          "editorItemColor": "#c2410c"
+        },
+        "components": {
+          "role": "root",
+          "order": {
+            "name": "sequential"
+          },
+          "items": [
+            {
+              "key": "nEn",
+              "role": "markdown",
+              "content": [
+                {
+                  "code": "nl",
+                  "parts": [
+                    {
+                      "str": "If you agree, UKHSA will contact you by email with a link to a partner website (Take a Test UK) to provide additional information. Your information will be handled securely by Take a Test UK and limited information will be shared with UKHSA to enable us to identify your sample and test results. \n\n \n\nPlease note that by agreeing to participate in self-swabbing, you understand that: \n\n* Your test results will be held securely by UKHSA and can be linked back to your survey data \n* You will receive certain test results (such as flu and COVID-19) but this test is not intended as a clinical diagnosis or to inform your treatment. If you need urgent results for your individual care, you should not use this service. \n* To help us understand risk factors and outcomes of respiratory viruses, your test results will be linked to securely held health data at UKHSA, such as previous immunisations and administrative health records    \n* These test results will only be sent to you and not to your GP \n* You can find full details about how your data will be used, stored, and protected - including the process of withdrawing from the study - in our [Privacy Notice](https://flusurvey.net/legal/privacy-postal-swabbing)"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "condition": {
+          "name": "responseHasKeysAny",
+          "data": [
+            {
+              "str": "swabbing.interest",
+              "dtype": "str"
+            },
+            {
+              "str": "rg.scg",
+              "dtype": "str"
+            },
+            {
+              "str": "yes",
+              "dtype": "str"
+            }
+          ],
+          "metadata": {
+            "slotTypes": [
+              "item-key-slot-key-options-single-choice"
+            ]
+          }
+        }
+      },
+      {
+        "key": "swabbing.consent",
+        "metadata": {
+          "editorItemColor": "#86198f"
+        },
+        "components": {
+          "role": "root",
+          "order": {
+            "name": "sequential"
+          },
+          "items": [
+            {
+              "role": "title",
+              "content": [
+                {
+                  "code": "nl",
+                  "parts": [
+                    {
+                      "str": "I have reviewed the information provided, including the privacy notice, and agree to take part in this self-swabbing study:"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "rg",
+              "role": "responseGroup",
+              "items": [
+                {
+                  "key": "scg",
+                  "role": "singleChoiceGroup",
+                  "items": [
+                    {
+                      "key": "yes",
+                      "role": "option",
+                      "content": [
+                        {
+                          "code": "nl",
+                          "parts": [
+                            {
+                              "str": "Yes"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "key": "no",
+                      "role": "option",
+                      "content": [
+                        {
+                          "code": "nl",
+                          "parts": [
+                            {
+                              "str": "No"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "order": {
+                    "name": "sequential"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "condition": {
+          "name": "responseHasKeysAny",
+          "data": [
+            {
+              "str": "swabbing.interest",
+              "dtype": "str"
+            },
+            {
+              "str": "rg.scg",
+              "dtype": "str"
+            },
+            {
+              "str": "yes",
+              "dtype": "str"
+            }
+          ],
+          "metadata": {
+            "slotTypes": [
+              "item-key-slot-key-options-single-choice"
+            ]
+          }
+        },
+        "validations": [
+          {
+            "key": "iqgx",
+            "type": "hard",
+            "rule": {
+              "name": "hasResponse",
+              "data": [
+                {
+                  "str": "swabbing.consent"
+                },
+                {
+                  "str": "rg"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "selectionMethod": {
+      "name": "sequential"
+    }
+  },
+  "versionId": ""
+}
