@@ -2508,21 +2508,56 @@
             "id": "000000000000000000000000",
             "key": "weekly.HS.Q6",
             "condition": {
-              "name": "eq",
+              "name": "and",
               "data": [
                 {
-                  "num": 1,
-                  "dtype": "num"
+                  "dtype": "exp",
+                  "exp": {
+                    "name": "eq",
+                    "data": [
+                      {
+                        "num": 1,
+                        "dtype": "num"
+                      },
+                      {
+                        "num": 2,
+                        "dtype": "num"
+                      }
+                    ],
+                    "metadata": {
+                      "slotTypes": [
+                        "number-input",
+                        "number-input"
+                      ]
+                    }
+                  }
                 },
                 {
-                  "num": 2,
-                  "dtype": "num"
+                  "dtype": "exp",
+                  "exp": {
+                    "name": "responseHasKeysAny",
+                    "data": [
+                      {
+                        "dtype": "str",
+                        "str": "weekly.q1.1"
+                      },
+                      {
+                        "dtype": "str",
+                        "str": "rg.mcg"
+                      },
+                      {
+                        "dtype": "str",
+                        "str": "1"
+                      }
+                    ],
+                    "metadata": {}
+                  }
                 }
               ],
               "metadata": {
                 "slotTypes": [
-                  "number-input",
-                  "number-input"
+                  "eq",
+                  "responseHasKeysAny"
                 ]
               }
             },
@@ -3189,6 +3224,28 @@
                             {
                               "key": "6",
                               "role": "option",
+                              "disabled": {
+                                "name": "responseHasKeysAny",
+                                "data": [
+                                  {
+                                    "dtype": "str",
+                                    "str": "weekly.HS.contact.Q7"
+                                  },
+                                  {
+                                    "dtype": "str",
+                                    "str": "rg.mcg"
+                                  },
+                                  {
+                                    "dtype": "str",
+                                    "str": "0"
+                                  },
+                                  {
+                                    "dtype": "str",
+                                    "str": "5"
+                                  }
+                                ],
+                                "metadata": {}
+                              },
                               "content": [
                                 {
                                   "code": "en",
@@ -4922,21 +4979,60 @@
                 "id": "000000000000000000000000",
                 "key": "weekly.HS.contact.Q8b",
                 "condition": {
-                  "name": "eq",
+                  "name": "and",
                   "data": [
                     {
-                      "num": 1,
-                      "dtype": "num"
+                      "dtype": "exp",
+                      "exp": {
+                        "name": "eq",
+                        "data": [
+                          {
+                            "num": 1,
+                            "dtype": "num"
+                          },
+                          {
+                            "num": 2,
+                            "dtype": "num"
+                          }
+                        ],
+                        "metadata": {
+                          "slotTypes": [
+                            "number-input",
+                            "number-input"
+                          ]
+                        }
+                      }
                     },
                     {
-                      "num": 2,
-                      "dtype": "num"
+                      "dtype": "exp",
+                      "exp": {
+                        "name": "responseHasOnlyKeysOtherThan",
+                        "data": [
+                          {
+                            "dtype": "str",
+                            "str": "weekly.HS.contact.Q8"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "rg.mcg"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "0"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "5"
+                          }
+                        ],
+                        "metadata": {}
+                      }
                     }
                   ],
                   "metadata": {
                     "slotTypes": [
-                      "number-input",
-                      "number-input"
+                      "eq",
+                      "responseHasOnlyKeysOtherThan"
                     ]
                   }
                 },
@@ -6781,7 +6877,7 @@
                             }
                           ],
                           "disabled": {
-                            "name": "responseHasKeysAny",
+                            "name": "responseHasOnlyKeysOtherThan",
                             "data": [
                               {
                                 "dtype": "str",
@@ -6793,7 +6889,7 @@
                               },
                               {
                                 "dtype": "str",
-                                "str": "6"
+                                "str": "0"
                               }
                             ],
                             "metadata": {}
@@ -7029,6 +7125,28 @@
                         {
                           "key": "10",
                           "role": "option",
+                          "disabled": {
+                            "name": "responseHasKeysAny",
+                            "data": [
+                              {
+                                "dtype": "str",
+                                "str": "weekly.HS.Q9"
+                              },
+                              {
+                                "dtype": "str",
+                                "str": "rg.mcg"
+                              },
+                              {
+                                "dtype": "str",
+                                "str": "0"
+                              },
+                              {
+                                "dtype": "str",
+                                "str": "6"
+                              }
+                            ],
+                            "metadata": {}
+                          },
                           "content": [
                             {
                               "code": "en",
@@ -7131,7 +7249,7 @@
                             }
                           ],
                           "disabled": {
-                            "name": "responseHasKeysAny",
+                            "name": "responseHasOnlyKeysOtherThan",
                             "data": [
                               {
                                 "dtype": "str",
@@ -7143,7 +7261,7 @@
                               },
                               {
                                 "dtype": "str",
-                                "str": "0"
+                                "str": "6"
                               }
                             ],
                             "metadata": {}
@@ -7735,21 +7853,56 @@
             "id": "000000000000000000000000",
             "key": "weekly.HS.Q10c",
             "condition": {
-              "name": "eq",
+              "name": "and",
               "data": [
                 {
-                  "num": 1,
-                  "dtype": "num"
+                  "dtype": "exp",
+                  "exp": {
+                    "name": "eq",
+                    "data": [
+                      {
+                        "num": 1,
+                        "dtype": "num"
+                      },
+                      {
+                        "num": 2,
+                        "dtype": "num"
+                      }
+                    ],
+                    "metadata": {
+                      "slotTypes": [
+                        "number-input",
+                        "number-input"
+                      ]
+                    }
+                  }
                 },
                 {
-                  "num": 2,
-                  "dtype": "num"
+                  "dtype": "exp",
+                  "exp": {
+                    "name": "responseHasKeysAny",
+                    "data": [
+                      {
+                        "dtype": "str",
+                        "str": "weekly.HS.Q10e"
+                      },
+                      {
+                        "dtype": "str",
+                        "str": "rg.scg"
+                      },
+                      {
+                        "dtype": "str",
+                        "str": "1"
+                      }
+                    ],
+                    "metadata": {}
+                  }
                 }
               ],
               "metadata": {
                 "slotTypes": [
-                  "number-input",
-                  "number-input"
+                  "eq",
+                  "responseHasKeysAny"
                 ]
               }
             },
@@ -8179,27 +8332,7 @@
             "metadata": {}
           },
           "description": null
-        },
-        "validations": [
-          {
-            "key": "r1",
-            "type": "hard",
-            "rule": {
-              "name": "hasResponse",
-              "data": [
-                {
-                  "dtype": "str",
-                  "str": "weekly.q1_2"
-                },
-                {
-                  "dtype": "str",
-                  "str": "rg"
-                }
-              ],
-              "metadata": {}
-            }
-          }
-        ]
+        }
       },
       {
         "id": "000000000000000000000000",
