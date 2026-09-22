@@ -1479,6 +1479,24 @@
                         {
                           "key": "0",
                           "role": "option",
+                          "disabled": {
+                            "name": "responseHasOnlyKeysOtherThan",
+                            "data": [
+                              {
+                                "dtype": "str",
+                                "str": "weekly.HS.Testing_v2"
+                              },
+                              {
+                                "dtype": "str",
+                                "str": "rg.mcg"
+                              },
+                              {
+                                "dtype": "str",
+                                "str": "0"
+                              }
+                            ],
+                            "metadata": {}
+                          },
                           "content": [
                             {
                               "code": "en",
@@ -1493,6 +1511,32 @@
                         {
                           "key": "1",
                           "role": "option",
+                          "disabled": {
+                            "name": "responseHasKeysAny",
+                            "data": [
+                              {
+                                "dtype": "str",
+                                "str": "weekly.HS.Testing_v2"
+                              },
+                              {
+                                "dtype": "str",
+                                "str": "rg.mcg"
+                              },
+                              {
+                                "dtype": "str",
+                                "str": "0"
+                              },
+                              {
+                                "dtype": "str",
+                                "str": "6"
+                              },
+                              {
+                                "dtype": "str",
+                                "str": "7"
+                              }
+                            ],
+                            "metadata": {}
+                          },
                           "content": [
                             {
                               "code": "en",
@@ -1507,6 +1551,32 @@
                         {
                           "key": "2",
                           "role": "option",
+                          "disabled": {
+                            "name": "responseHasKeysAny",
+                            "data": [
+                              {
+                                "dtype": "str",
+                                "str": "weekly.HS.Testing_v2"
+                              },
+                              {
+                                "dtype": "str",
+                                "str": "rg.mcg"
+                              },
+                              {
+                                "dtype": "str",
+                                "str": "0"
+                              },
+                              {
+                                "dtype": "str",
+                                "str": "6"
+                              },
+                              {
+                                "dtype": "str",
+                                "str": "7"
+                              }
+                            ],
+                            "metadata": {}
+                          },
                           "content": [
                             {
                               "code": "en",
@@ -1521,6 +1591,32 @@
                         {
                           "key": "3",
                           "role": "option",
+                          "disabled": {
+                            "name": "responseHasKeysAny",
+                            "data": [
+                              {
+                                "dtype": "str",
+                                "str": "weekly.HS.Testing_v2"
+                              },
+                              {
+                                "dtype": "str",
+                                "str": "rg.mcg"
+                              },
+                              {
+                                "dtype": "str",
+                                "str": "0"
+                              },
+                              {
+                                "dtype": "str",
+                                "str": "6"
+                              },
+                              {
+                                "dtype": "str",
+                                "str": "7"
+                              }
+                            ],
+                            "metadata": {}
+                          },
                           "content": [
                             {
                               "code": "en",
@@ -1535,6 +1631,32 @@
                         {
                           "key": "5",
                           "role": "option",
+                          "disabled": {
+                            "name": "responseHasKeysAny",
+                            "data": [
+                              {
+                                "dtype": "str",
+                                "str": "weekly.HS.Testing_v2"
+                              },
+                              {
+                                "dtype": "str",
+                                "str": "rg.mcg"
+                              },
+                              {
+                                "dtype": "str",
+                                "str": "0"
+                              },
+                              {
+                                "dtype": "str",
+                                "str": "6"
+                              },
+                              {
+                                "dtype": "str",
+                                "str": "7"
+                              }
+                            ],
+                            "metadata": {}
+                          },
                           "content": [
                             {
                               "code": "en",
@@ -1549,6 +1671,24 @@
                         {
                           "key": "6",
                           "role": "option",
+                          "disabled": {
+                            "name": "responseHasOnlyKeysOtherThan",
+                            "data": [
+                              {
+                                "dtype": "str",
+                                "str": "weekly.HS.Testing_v2"
+                              },
+                              {
+                                "dtype": "str",
+                                "str": "rg.mcg"
+                              },
+                              {
+                                "dtype": "str",
+                                "str": "6"
+                              }
+                            ],
+                            "metadata": {}
+                          },
                           "content": [
                             {
                               "code": "en",
@@ -1563,6 +1703,24 @@
                         {
                           "key": "7",
                           "role": "option",
+                          "disabled": {
+                            "name": "responseHasOnlyKeysOtherThan",
+                            "data": [
+                              {
+                                "dtype": "str",
+                                "str": "weekly.HS.Testing_v2"
+                              },
+                              {
+                                "dtype": "str",
+                                "str": "rg.mcg"
+                              },
+                              {
+                                "dtype": "str",
+                                "str": "7"
+                              }
+                            ],
+                            "metadata": {}
+                          },
                           "content": [
                             {
                               "code": "en",
