@@ -1,5 +1,5 @@
 {
-  "id": "69bbe00b6578c5a03f9efcd2",
+  "id": "6a9935d0611a95bd96079d9a",
   "surveyKey": "weekly",
   "props": {
     "name": [
@@ -36,7 +36,7 @@
       }
     ]
   },
-  "published": 1773920267,
+  "published": 1788425680,
   "surveyDefinition": {
     "id": "000000000000000000000000",
     "key": "weekly",
@@ -1423,6 +1423,178 @@
                 "metadata": {}
               },
               "description": null
+            },
+            "condition": {
+              "name": "eq",
+              "data": [
+                {
+                  "num": 1,
+                  "dtype": "num"
+                },
+                {
+                  "num": 2,
+                  "dtype": "num"
+                }
+              ],
+              "metadata": {
+                "slotTypes": [
+                  "number-input",
+                  "number-input"
+                ]
+              }
+            }
+          },
+          {
+            "key": "weekly.HS.Testing_v2",
+            "metadata": {
+              "editorItemColor": "#4d7c0f"
+            },
+            "components": {
+              "role": "root",
+              "order": {
+                "name": "sequential"
+              },
+              "items": [
+                {
+                  "role": "title",
+                  "content": [
+                    {
+                      "code": "en",
+                      "parts": [
+                        {
+                          "str": "Because of your symptoms, did you use testing at home or were you tested in any health services in relation to these symptoms?"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "key": "rg",
+                  "role": "responseGroup",
+                  "items": [
+                    {
+                      "key": "mcg",
+                      "role": "multipleChoiceGroup",
+                      "items": [
+                        {
+                          "key": "0",
+                          "role": "option",
+                          "content": [
+                            {
+                              "code": "en",
+                              "parts": [
+                                {
+                                  "str": "No, I have not been tested"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "key": "1",
+                          "role": "option",
+                          "content": [
+                            {
+                              "code": "en",
+                              "parts": [
+                                {
+                                  "str": "Yes, I tested positive for COVID-19"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "key": "2",
+                          "role": "option",
+                          "content": [
+                            {
+                              "code": "en",
+                              "parts": [
+                                {
+                                  "str": "Yes, I tested positive for Flu"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "key": "3",
+                          "role": "option",
+                          "content": [
+                            {
+                              "code": "en",
+                              "parts": [
+                                {
+                                  "str": "Yes, I tested positive for RSV"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "key": "5",
+                          "role": "option",
+                          "content": [
+                            {
+                              "code": "en",
+                              "parts": [
+                                {
+                                  "str": "Yes, I tested positive for another infection"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "key": "6",
+                          "role": "option",
+                          "content": [
+                            {
+                              "code": "en",
+                              "parts": [
+                                {
+                                  "str": "Yes, I was tested but the result was negative"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "key": "7",
+                          "role": "option",
+                          "content": [
+                            {
+                              "code": "en",
+                              "parts": [
+                                {
+                                  "str": "Don't know/can't remember"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "order": {
+                        "name": "sequential"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "role": "subtitle",
+                  "content": [
+                    {
+                      "code": "en",
+                      "parts": [
+                        {
+                          "str": "Please select all that apply"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           },
           {
@@ -2178,22 +2350,23 @@
             "id": "000000000000000000000000",
             "key": "weekly.HS.Q6",
             "condition": {
-              "name": "responseHasKeysAny",
+              "name": "eq",
               "data": [
                 {
-                  "dtype": "str",
-                  "str": "weekly.q1.1"
+                  "num": 1,
+                  "dtype": "num"
                 },
                 {
-                  "dtype": "str",
-                  "str": "rg.mcg"
-                },
-                {
-                  "dtype": "str",
-                  "str": "1"
+                  "num": 2,
+                  "dtype": "num"
                 }
               ],
-              "metadata": {}
+              "metadata": {
+                "slotTypes": [
+                  "number-input",
+                  "number-input"
+                ]
+              }
             },
             "items": [
               {
@@ -2856,6 +3029,20 @@
                               "description": null
                             },
                             {
+                              "key": "6",
+                              "role": "option",
+                              "content": [
+                                {
+                                  "code": "en",
+                                  "parts": [
+                                    {
+                                      "str": "Pharmacy"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
                               "role": "option",
                               "key": "1",
                               "content": [
@@ -3086,23 +3273,35 @@
                   "name": "responseHasOnlyKeysOtherThan",
                   "data": [
                     {
-                      "dtype": "str",
-                      "str": "weekly.HS.contact.Q7"
+                      "str": "weekly.HS.contact.Q7",
+                      "dtype": "str"
                     },
                     {
-                      "dtype": "str",
-                      "str": "rg.mcg"
+                      "str": "rg.mcg",
+                      "dtype": "str"
                     },
                     {
-                      "dtype": "str",
-                      "str": "0"
+                      "str": "0",
+                      "dtype": "str"
                     },
                     {
-                      "dtype": "str",
-                      "str": "5"
+                      "str": "5",
+                      "dtype": "str"
+                    },
+                    {
+                      "str": "4",
+                      "dtype": "str"
+                    },
+                    {
+                      "str": "6",
+                      "dtype": "str"
                     }
                   ],
-                  "metadata": {}
+                  "metadata": {
+                    "slotTypes": [
+                      "item-key-slot-key-options-generic"
+                    ]
+                  }
                 },
                 "components": {
                   "role": "root",
@@ -4174,323 +4373,6 @@
                                 }
                               ],
                               "description": null
-                            },
-                            {
-                              "role": "responseRow",
-                              "key": "r4",
-                              "content": [
-                                {
-                                  "code": "en",
-                                  "parts": [
-                                    {
-                                      "dtype": "",
-                                      "str": "Other medical services"
-                                    }
-                                  ]
-                                }
-                              ],
-                              "displayCondition": {
-                                "name": "responseHasKeysAny",
-                                "data": [
-                                  {
-                                    "dtype": "str",
-                                    "str": "weekly.HS.contact.Q7"
-                                  },
-                                  {
-                                    "dtype": "str",
-                                    "str": "rg.mcg"
-                                  },
-                                  {
-                                    "dtype": "str",
-                                    "str": "4"
-                                  }
-                                ],
-                                "metadata": {}
-                              },
-                              "items": [
-                                {
-                                  "role": "dropDownGroup",
-                                  "key": "col1",
-                                  "content": null,
-                                  "items": [
-                                    {
-                                      "role": "option",
-                                      "key": "0",
-                                      "content": [
-                                        {
-                                          "code": "en",
-                                          "parts": [
-                                            {
-                                              "dtype": "",
-                                              "str": "Same day"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      "description": null
-                                    },
-                                    {
-                                      "role": "option",
-                                      "key": "1",
-                                      "content": [
-                                        {
-                                          "code": "en",
-                                          "parts": [
-                                            {
-                                              "dtype": "",
-                                              "str": "1 day"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      "description": null
-                                    },
-                                    {
-                                      "role": "option",
-                                      "key": "2",
-                                      "content": [
-                                        {
-                                          "code": "en",
-                                          "parts": [
-                                            {
-                                              "dtype": "",
-                                              "str": "2 days"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      "description": null
-                                    },
-                                    {
-                                      "role": "option",
-                                      "key": "3",
-                                      "content": [
-                                        {
-                                          "code": "en",
-                                          "parts": [
-                                            {
-                                              "dtype": "",
-                                              "str": "3 days"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      "description": null
-                                    },
-                                    {
-                                      "role": "option",
-                                      "key": "4",
-                                      "content": [
-                                        {
-                                          "code": "en",
-                                          "parts": [
-                                            {
-                                              "dtype": "",
-                                              "str": "4 days"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      "description": null
-                                    },
-                                    {
-                                      "role": "option",
-                                      "key": "5",
-                                      "content": [
-                                        {
-                                          "code": "en",
-                                          "parts": [
-                                            {
-                                              "dtype": "",
-                                              "str": "5 days"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      "description": null
-                                    },
-                                    {
-                                      "role": "option",
-                                      "key": "6",
-                                      "content": [
-                                        {
-                                          "code": "en",
-                                          "parts": [
-                                            {
-                                              "dtype": "",
-                                              "str": "6 days"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      "description": null
-                                    },
-                                    {
-                                      "role": "option",
-                                      "key": "7",
-                                      "content": [
-                                        {
-                                          "code": "en",
-                                          "parts": [
-                                            {
-                                              "dtype": "",
-                                              "str": "7 days"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      "description": null
-                                    },
-                                    {
-                                      "role": "option",
-                                      "key": "8",
-                                      "content": [
-                                        {
-                                          "code": "en",
-                                          "parts": [
-                                            {
-                                              "dtype": "",
-                                              "str": "8 days"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      "description": null
-                                    },
-                                    {
-                                      "role": "option",
-                                      "key": "9",
-                                      "content": [
-                                        {
-                                          "code": "en",
-                                          "parts": [
-                                            {
-                                              "dtype": "",
-                                              "str": "9 days"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      "description": null
-                                    },
-                                    {
-                                      "role": "option",
-                                      "key": "10",
-                                      "content": [
-                                        {
-                                          "code": "en",
-                                          "parts": [
-                                            {
-                                              "dtype": "",
-                                              "str": "10 days"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      "description": null
-                                    },
-                                    {
-                                      "role": "option",
-                                      "key": "11",
-                                      "content": [
-                                        {
-                                          "code": "en",
-                                          "parts": [
-                                            {
-                                              "dtype": "",
-                                              "str": "11 days"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      "description": null
-                                    },
-                                    {
-                                      "role": "option",
-                                      "key": "12",
-                                      "content": [
-                                        {
-                                          "code": "en",
-                                          "parts": [
-                                            {
-                                              "dtype": "",
-                                              "str": "12 days"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      "description": null
-                                    },
-                                    {
-                                      "role": "option",
-                                      "key": "13",
-                                      "content": [
-                                        {
-                                          "code": "en",
-                                          "parts": [
-                                            {
-                                              "dtype": "",
-                                              "str": "13 days"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      "description": null
-                                    },
-                                    {
-                                      "role": "option",
-                                      "key": "14",
-                                      "content": [
-                                        {
-                                          "code": "en",
-                                          "parts": [
-                                            {
-                                              "dtype": "",
-                                              "str": "14 days"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      "description": null
-                                    },
-                                    {
-                                      "role": "option",
-                                      "key": "15",
-                                      "content": [
-                                        {
-                                          "code": "en",
-                                          "parts": [
-                                            {
-                                              "dtype": "",
-                                              "str": "More than 14 days"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      "description": null
-                                    },
-                                    {
-                                      "role": "option",
-                                      "key": "16",
-                                      "content": [
-                                        {
-                                          "code": "en",
-                                          "parts": [
-                                            {
-                                              "dtype": "",
-                                              "str": "I don't know/can't remember"
-                                            }
-                                          ]
-                                        }
-                                      ],
-                                      "description": null
-                                    }
-                                  ],
-                                  "properties": {},
-                                  "description": null
-                                }
-                              ],
-                              "description": null
                             }
                           ],
                           "order": {
@@ -4714,8 +4596,7 @@
                                   "code": "en",
                                   "parts": [
                                     {
-                                      "dtype": "",
-                                      "str": "NHS 111 / NHS 24"
+                                      "str": "NHS 111 / NHS 24 telephone services"
                                     }
                                   ]
                                 }
@@ -4748,8 +4629,7 @@
                                   "code": "en",
                                   "parts": [
                                     {
-                                      "dtype": "",
-                                      "str": "Online NHS Services"
+                                      "str": "Online NHS Services (including online 111 service)"
                                     }
                                   ]
                                 }
@@ -4884,26 +4764,23 @@
                 "id": "000000000000000000000000",
                 "key": "weekly.HS.contact.Q8b",
                 "condition": {
-                  "name": "responseHasOnlyKeysOtherThan",
+                  "name": "eq",
                   "data": [
                     {
-                      "dtype": "str",
-                      "str": "weekly.HS.contact.Q8"
+                      "num": 1,
+                      "dtype": "num"
                     },
                     {
-                      "dtype": "str",
-                      "str": "rg.mcg"
-                    },
-                    {
-                      "dtype": "str",
-                      "str": "0"
-                    },
-                    {
-                      "dtype": "str",
-                      "str": "5"
+                      "num": 2,
+                      "dtype": "num"
                     }
                   ],
-                  "metadata": {}
+                  "metadata": {
+                    "slotTypes": [
+                      "number-input",
+                      "number-input"
+                    ]
+                  }
                 },
                 "components": {
                   "role": "root",
@@ -6811,8 +6688,7 @@
                               "code": "en",
                               "parts": [
                                 {
-                                  "dtype": "",
-                                  "str": "Cough medication (e.g. expectorants)"
+                                  "str": "Cough syrup/medicine (e.g. expectorants)"
                                 }
                               ]
                             }
@@ -6887,8 +6763,7 @@
                               "code": "en",
                               "parts": [
                                 {
-                                  "dtype": "",
-                                  "str": "COVID-19 medical treatments such as Paxlovid or sotrovimab"
+                                  "str": "COVID-19 medical treatments such as Paxlovid"
                                 }
                               ]
                             }
@@ -6992,6 +6867,20 @@
                             "metadata": {}
                           },
                           "description": null
+                        },
+                        {
+                          "key": "10",
+                          "role": "option",
+                          "content": [
+                            {
+                              "code": "en",
+                              "parts": [
+                                {
+                                  "str": "Traditional Chinese medicine (TCM)"
+                                }
+                              ]
+                            }
+                          ]
                         },
                         {
                           "role": "option",
@@ -7688,22 +7577,23 @@
             "id": "000000000000000000000000",
             "key": "weekly.HS.Q10c",
             "condition": {
-              "name": "responseHasKeysAny",
+              "name": "eq",
               "data": [
                 {
-                  "dtype": "str",
-                  "str": "weekly.HS.Q10e"
+                  "num": 1,
+                  "dtype": "num"
                 },
                 {
-                  "dtype": "str",
-                  "str": "rg.scg"
-                },
-                {
-                  "dtype": "str",
-                  "str": "1"
+                  "num": 2,
+                  "dtype": "num"
                 }
               ],
-              "metadata": {}
+              "metadata": {
+                "slotTypes": [
+                  "number-input",
+                  "number-input"
+                ]
+              }
             },
             "components": {
               "role": "root",
@@ -9066,6 +8956,5 @@
       "name": "sequential",
       "metadata": {}
     }
-  },
-  "versionId": "26-03-3"
+  }
 }
