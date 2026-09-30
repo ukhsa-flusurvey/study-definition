@@ -1,5 +1,5 @@
 {
-  "id": "6ab67af5611a95bd96079ddf",
+  "id": "6aba7343611a95bd96079df3",
   "surveyKey": "intake",
   "props": {
     "name": [
@@ -200,7 +200,7 @@
       ]
     }
   ],
-  "published": 1790343925,
+  "published": 1790604099,
   "surveyDefinition": {
     "id": "000000000000000000000000",
     "key": "intake",
@@ -743,7 +743,7 @@
                   "parts": [
                     {
                       "dtype": "",
-                      "str": "What is your current Country of residence?"
+                      "str": "What is your current country of residence?"
                     }
                   ]
                 }
@@ -5580,7 +5580,7 @@
                   "parts": [
                     {
                       "dtype": "",
-                      "str": "Are you planning to receive a COVID-19 vaccine this season (2026-2027)?"
+                      "str": "Are you planning to receive a COVID-19 vaccine this season (2026/2027)?"
                     }
                   ]
                 }
@@ -5883,7 +5883,7 @@
                       "parts": [
                         {
                           "dtype": "",
-                          "str": "**How should I answer it?**\n\nReport yes if you are planning or have received the RSV vaccine. The RSV vaccine is recommended if\n\n* you're 28 weeks pregnant or more – the vaccine is recommended during every pregnancy to help protect your baby after they're born\n* you're aged 75 to 79\n* you turned 80 years old after 1 September 2024\n\nIf you are not in an eligible group, please select “No, I’m not in one of the eligible groups”.\n\n***"
+                          "str": "**How should I answer it?**\n\nReport yes if you are planning or have received the RSV vaccine. The RSV vaccine is recommended if:\n\n* you're 28 weeks pregnant or more – the vaccine is recommended during every pregnancy to help protect your baby after they're born\n* you're aged 75 or over\n* you're aged 65 to 74 and have a weakened immune system or have a long-term lung condition (this does not include asthma that is under control)\n* you live in a care home for older adults\n\nIf you are not in an eligible group, please select “No, I’m not in one of the eligible groups”."
                         }
                       ]
                     }
@@ -5896,8 +5896,7 @@
                 }
               ],
               "order": {
-                "name": "sequential",
-                "metadata": {}
+                "name": "sequential"
               },
               "description": null
             }
@@ -6279,6 +6278,21 @@
                 }
               ],
               "description": []
+            },
+            {
+              "role": "subtitle",
+              "key": "",
+              "content": [
+                {
+                  "code": "en",
+                  "parts": [
+                    {
+                      "dtype": ""
+                    }
+                  ]
+                }
+              ],
+              "description": null
             }
           ],
           "order": {
@@ -6336,6 +6350,22 @@
               "description": null
             },
             {
+              "role": "text",
+              "key": "3en0pj",
+              "content": [
+                {
+                  "code": "en",
+                  "parts": [
+                    {
+                      "dtype": "",
+                      "str": "Select all options that apply"
+                    }
+                  ]
+                }
+              ],
+              "description": null
+            },
+            {
               "role": "responseGroup",
               "key": "rg",
               "content": null,
@@ -6348,404 +6378,6 @@
                     {
                       "role": "option",
                       "key": "0",
-                      "disabled": {
-                        "name": "responseHasKeysAny",
-                        "data": [
-                          {
-                            "dtype": "str",
-                            "str": "intake.Q11_2"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "rg.mcg"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "10"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "11"
-                          }
-                        ],
-                        "metadata": {}
-                      },
-                      "content": [
-                        {
-                          "code": "en",
-                          "parts": [
-                            {
-                              "dtype": "",
-                              "str": "Conditions that affect your breathing, such as asthma (needing a steroid inhaler or tablets), chronic obstructive pulmonary disease (COPD) or cystic fibrosis"
-                            }
-                          ]
-                        }
-                      ],
-                      "description": null
-                    },
-                    {
-                      "role": "option",
-                      "key": "1",
-                      "disabled": {
-                        "name": "responseHasKeysAny",
-                        "data": [
-                          {
-                            "dtype": "str",
-                            "str": "intake.Q11_2"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "rg.mcg"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "10"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "11"
-                          }
-                        ],
-                        "metadata": {}
-                      },
-                      "content": [
-                        {
-                          "code": "en",
-                          "parts": [
-                            {
-                              "dtype": "",
-                              "str": "Heart conditions, such as coronary heart disease or heart failure"
-                            }
-                          ]
-                        }
-                      ],
-                      "description": null
-                    },
-                    {
-                      "role": "option",
-                      "key": "2",
-                      "disabled": {
-                        "name": "responseHasKeysAny",
-                        "data": [
-                          {
-                            "dtype": "str",
-                            "str": "intake.Q11_2"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "rg.mcg"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "10"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "11"
-                          }
-                        ],
-                        "metadata": {}
-                      },
-                      "content": [
-                        {
-                          "code": "en",
-                          "parts": [
-                            {
-                              "dtype": "",
-                              "str": "Chronic kidney disease"
-                            }
-                          ]
-                        }
-                      ],
-                      "description": null
-                    },
-                    {
-                      "role": "option",
-                      "key": "3",
-                      "disabled": {
-                        "name": "responseHasKeysAny",
-                        "data": [
-                          {
-                            "dtype": "str",
-                            "str": "intake.Q11_2"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "rg.mcg"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "10"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "11"
-                          }
-                        ],
-                        "metadata": {}
-                      },
-                      "content": [
-                        {
-                          "code": "en",
-                          "parts": [
-                            {
-                              "dtype": "",
-                              "str": "Liver disease, such as cirrhosis or hepatitis"
-                            }
-                          ]
-                        }
-                      ],
-                      "description": null
-                    },
-                    {
-                      "role": "option",
-                      "key": "4",
-                      "disabled": {
-                        "name": "responseHasKeysAny",
-                        "data": [
-                          {
-                            "dtype": "str",
-                            "str": "intake.Q11_2"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "rg.mcg"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "10"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "11"
-                          }
-                        ],
-                        "metadata": {}
-                      },
-                      "content": [
-                        {
-                          "code": "en",
-                          "parts": [
-                            {
-                              "dtype": "",
-                              "str": "Some conditions that affect your brain or nerves, such as Parkinson's disease, motor neurone disease, multiple sclerosis or cerebral palsy"
-                            }
-                          ]
-                        }
-                      ],
-                      "description": null
-                    },
-                    {
-                      "role": "option",
-                      "key": "5",
-                      "disabled": {
-                        "name": "responseHasKeysAny",
-                        "data": [
-                          {
-                            "dtype": "str",
-                            "str": "intake.Q11_2"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "rg.mcg"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "10"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "11"
-                          }
-                        ],
-                        "metadata": {}
-                      },
-                      "content": [
-                        {
-                          "code": "en",
-                          "parts": [
-                            {
-                              "dtype": "",
-                              "str": "Diabetes or Addison's disease"
-                            }
-                          ]
-                        }
-                      ],
-                      "description": null
-                    },
-                    {
-                      "role": "option",
-                      "key": "6",
-                      "disabled": {
-                        "name": "responseHasKeysAny",
-                        "data": [
-                          {
-                            "dtype": "str",
-                            "str": "intake.Q11_2"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "rg.mcg"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "10"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "11"
-                          }
-                        ],
-                        "metadata": {}
-                      },
-                      "content": [
-                        {
-                          "code": "en",
-                          "parts": [
-                            {
-                              "dtype": "",
-                              "str": "A weakened immune system due to a condition such as HIV or AIDS, or due to a treatment such as chemotherapy or steroid medicine"
-                            }
-                          ]
-                        }
-                      ],
-                      "description": null
-                    },
-                    {
-                      "role": "option",
-                      "key": "7",
-                      "disabled": {
-                        "name": "responseHasKeysAny",
-                        "data": [
-                          {
-                            "dtype": "str",
-                            "str": "intake.Q11_2"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "rg.mcg"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "10"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "11"
-                          }
-                        ],
-                        "metadata": {}
-                      },
-                      "content": [
-                        {
-                          "code": "en",
-                          "parts": [
-                            {
-                              "dtype": "",
-                              "str": "Problems with your spleen, such as sickle cell disease, or if you've had your spleen removed"
-                            }
-                          ]
-                        }
-                      ],
-                      "description": null
-                    },
-                    {
-                      "role": "option",
-                      "key": "8",
-                      "disabled": {
-                        "name": "responseHasKeysAny",
-                        "data": [
-                          {
-                            "dtype": "str",
-                            "str": "intake.Q11_2"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "rg.mcg"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "10"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "11"
-                          }
-                        ],
-                        "metadata": {}
-                      },
-                      "content": [
-                        {
-                          "code": "en",
-                          "parts": [
-                            {
-                              "dtype": "",
-                              "str": "A learning disability"
-                            }
-                          ]
-                        }
-                      ],
-                      "description": null
-                    },
-                    {
-                      "role": "option",
-                      "key": "9",
-                      "disabled": {
-                        "name": "responseHasKeysAny",
-                        "data": [
-                          {
-                            "dtype": "str",
-                            "str": "intake.Q11_2"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "rg.mcg"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "10"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "11"
-                          }
-                        ],
-                        "metadata": {}
-                      },
-                      "content": [
-                        {
-                          "code": "en",
-                          "parts": [
-                            {
-                              "dtype": "",
-                              "str": "Obesity – a body mass index (BMI) of 40 or above"
-                            }
-                          ]
-                        }
-                      ],
-                      "description": null
-                    },
-                    {
-                      "role": "option",
-                      "key": "10",
-                      "disabled": {
-                        "name": "responseHasOnlyKeysOtherThan",
-                        "data": [
-                          {
-                            "dtype": "str",
-                            "str": "intake.Q11_2"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "rg.mcg"
-                          },
-                          {
-                            "dtype": "str",
-                            "str": "10"
-                          }
-                        ],
-                        "metadata": {}
-                      },
                       "content": [
                         {
                           "code": "en",
@@ -6757,11 +6389,420 @@
                           ]
                         }
                       ],
+                      "disabled": {
+                        "name": "responseHasOnlyKeysOtherThan",
+                        "data": [
+                          {
+                            "dtype": "str",
+                            "str": "intake.Q11_2"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "rg.mcg"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "0"
+                          }
+                        ],
+                        "metadata": {}
+                      },
+                      "description": null
+                    },
+                    {
+                      "role": "option",
+                      "key": "1",
+                      "content": [
+                        {
+                          "code": "en",
+                          "parts": [
+                            {
+                              "dtype": "",
+                              "str": "Heart conditions, such as coronary heart disease or heart failure"
+                            }
+                          ]
+                        }
+                      ],
+                      "disabled": {
+                        "name": "responseHasKeysAny",
+                        "data": [
+                          {
+                            "dtype": "str",
+                            "str": "intake.Q11_2"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "rg.mcg"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "0"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "11"
+                          }
+                        ],
+                        "metadata": {}
+                      },
+                      "description": null
+                    },
+                    {
+                      "role": "option",
+                      "key": "2",
+                      "content": [
+                        {
+                          "code": "en",
+                          "parts": [
+                            {
+                              "dtype": "",
+                              "str": "Chronic kidney disease"
+                            }
+                          ]
+                        }
+                      ],
+                      "disabled": {
+                        "name": "responseHasKeysAny",
+                        "data": [
+                          {
+                            "dtype": "str",
+                            "str": "intake.Q11_2"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "rg.mcg"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "0"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "11"
+                          }
+                        ],
+                        "metadata": {}
+                      },
+                      "description": null
+                    },
+                    {
+                      "role": "option",
+                      "key": "3",
+                      "content": [
+                        {
+                          "code": "en",
+                          "parts": [
+                            {
+                              "dtype": "",
+                              "str": "Liver disease, such as cirrhosis or hepatitis"
+                            }
+                          ]
+                        }
+                      ],
+                      "disabled": {
+                        "name": "responseHasKeysAny",
+                        "data": [
+                          {
+                            "dtype": "str",
+                            "str": "intake.Q11_2"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "rg.mcg"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "0"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "11"
+                          }
+                        ],
+                        "metadata": {}
+                      },
+                      "description": null
+                    },
+                    {
+                      "role": "option",
+                      "key": "4",
+                      "content": [
+                        {
+                          "code": "en",
+                          "parts": [
+                            {
+                              "dtype": "",
+                              "str": "Some conditions that affect your brain or nerves, such as Parkinson's disease, motor neurone disease, multiple sclerosis or cerebral palsy"
+                            }
+                          ]
+                        }
+                      ],
+                      "disabled": {
+                        "name": "responseHasKeysAny",
+                        "data": [
+                          {
+                            "dtype": "str",
+                            "str": "intake.Q11_2"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "rg.mcg"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "0"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "11"
+                          }
+                        ],
+                        "metadata": {}
+                      },
+                      "description": null
+                    },
+                    {
+                      "role": "option",
+                      "key": "5",
+                      "content": [
+                        {
+                          "code": "en",
+                          "parts": [
+                            {
+                              "dtype": "",
+                              "str": "Diabetes or Addison's disease"
+                            }
+                          ]
+                        }
+                      ],
+                      "disabled": {
+                        "name": "responseHasKeysAny",
+                        "data": [
+                          {
+                            "dtype": "str",
+                            "str": "intake.Q11_2"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "rg.mcg"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "0"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "11"
+                          }
+                        ],
+                        "metadata": {}
+                      },
+                      "description": null
+                    },
+                    {
+                      "role": "option",
+                      "key": "6",
+                      "content": [
+                        {
+                          "code": "en",
+                          "parts": [
+                            {
+                              "dtype": "",
+                              "str": "A weakened immune system due to a condition such as HIV or AIDS, or due to a treatment such as chemotherapy or steroid medicine"
+                            }
+                          ]
+                        }
+                      ],
+                      "disabled": {
+                        "name": "responseHasKeysAny",
+                        "data": [
+                          {
+                            "dtype": "str",
+                            "str": "intake.Q11_2"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "rg.mcg"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "0"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "11"
+                          }
+                        ],
+                        "metadata": {}
+                      },
+                      "description": null
+                    },
+                    {
+                      "role": "option",
+                      "key": "7",
+                      "content": [
+                        {
+                          "code": "en",
+                          "parts": [
+                            {
+                              "dtype": "",
+                              "str": "Problems with your spleen, such as sickle cell disease, or if you've had your spleen removed"
+                            }
+                          ]
+                        }
+                      ],
+                      "disabled": {
+                        "name": "responseHasKeysAny",
+                        "data": [
+                          {
+                            "dtype": "str",
+                            "str": "intake.Q11_2"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "rg.mcg"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "0"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "11"
+                          }
+                        ],
+                        "metadata": {}
+                      },
+                      "description": null
+                    },
+                    {
+                      "role": "option",
+                      "key": "8",
+                      "content": [
+                        {
+                          "code": "en",
+                          "parts": [
+                            {
+                              "dtype": "",
+                              "str": "A learning disability"
+                            }
+                          ]
+                        }
+                      ],
+                      "disabled": {
+                        "name": "responseHasKeysAny",
+                        "data": [
+                          {
+                            "dtype": "str",
+                            "str": "intake.Q11_2"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "rg.mcg"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "0"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "11"
+                          }
+                        ],
+                        "metadata": {}
+                      },
+                      "description": null
+                    },
+                    {
+                      "role": "option",
+                      "key": "9",
+                      "content": [
+                        {
+                          "code": "en",
+                          "parts": [
+                            {
+                              "dtype": "",
+                              "str": "Obesity – a body mass index (BMI) of 40 or above"
+                            }
+                          ]
+                        }
+                      ],
+                      "disabled": {
+                        "name": "responseHasKeysAny",
+                        "data": [
+                          {
+                            "dtype": "str",
+                            "str": "intake.Q11_2"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "rg.mcg"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "0"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "11"
+                          }
+                        ],
+                        "metadata": {}
+                      },
+                      "description": null
+                    },
+                    {
+                      "role": "option",
+                      "key": "10",
+                      "content": [
+                        {
+                          "code": "en",
+                          "parts": [
+                            {
+                              "dtype": "",
+                              "str": "Conditions that affect your breathing, such as asthma (needing a steroid inhaler or tablets), chronic obstructive pulmonary disease (COPD) or cystic fibrosis"
+                            }
+                          ]
+                        }
+                      ],
+                      "disabled": {
+                        "name": "responseHasKeysAny",
+                        "data": [
+                          {
+                            "dtype": "str",
+                            "str": "intake.Q11_2"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "rg.mcg"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "0"
+                          },
+                          {
+                            "dtype": "str",
+                            "str": "11"
+                          }
+                        ],
+                        "metadata": {}
+                      },
                       "description": null
                     },
                     {
                       "role": "option",
                       "key": "11",
+                      "content": [
+                        {
+                          "code": "en",
+                          "parts": [
+                            {
+                              "dtype": "",
+                              "str": "I would rather not answer"
+                            }
+                          ]
+                        }
+                      ],
                       "disabled": {
                         "name": "responseHasOnlyKeysOtherThan",
                         "data": [
@@ -6780,17 +6821,6 @@
                         ],
                         "metadata": {}
                       },
-                      "content": [
-                        {
-                          "code": "en",
-                          "parts": [
-                            {
-                              "dtype": "",
-                              "str": "I would rather not answer"
-                            }
-                          ]
-                        }
-                      ],
                       "description": null
                     }
                   ],
@@ -6816,9 +6846,11 @@
               "name": "hasResponse",
               "data": [
                 {
+                  "dtype": "",
                   "str": "intake.Q11_2"
                 },
                 {
+                  "dtype": "",
                   "str": "rg"
                 }
               ]
@@ -7765,6 +7797,22 @@
               "description": []
             },
             {
+              "role": "text",
+              "key": "82806",
+              "content": [
+                {
+                  "code": "en",
+                  "parts": [
+                    {
+                      "dtype": "",
+                      "str": "Select all options that apply"
+                    }
+                  ]
+                }
+              ],
+              "description": null
+            },
+            {
               "role": "responseGroup",
               "key": "rg",
               "content": [],
@@ -8105,7 +8153,7 @@
                   "parts": [
                     {
                       "dtype": "",
-                      "str": "This was all for now, please submit your responses. Please return to your dashboard to find a different survey about how you feel and your health status. "
+                      "str": "Please submit your responses to return to your dashboard. There you will find your weekly symptoms survey!"
                     }
                   ]
                 }
@@ -8126,5 +8174,5 @@
       "metadata": {}
     }
   },
-  "versionId": "26-09-16"
+  "versionId": "26-09-26"
 }

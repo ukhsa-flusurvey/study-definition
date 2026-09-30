@@ -1,5 +1,5 @@
 {
-  "id": "6a9935d0611a95bd96079d9a",
+  "id": "6aba5d51611a95bd96079df0",
   "surveyKey": "weekly",
   "props": {
     "name": [
@@ -36,7 +36,7 @@
       }
     ]
   },
-  "published": 1788425680,
+  "published": 1790598481,
   "surveyDefinition": {
     "id": "000000000000000000000000",
     "key": "weekly",
@@ -1198,6 +1198,25 @@
           {
             "id": "000000000000000000000000",
             "key": "weekly.HS.Testing",
+            "condition": {
+              "name": "eq",
+              "data": [
+                {
+                  "dtype": "num",
+                  "num": 1
+                },
+                {
+                  "dtype": "num",
+                  "num": 2
+                }
+              ],
+              "metadata": {
+                "slotTypes": [
+                  "number-input",
+                  "number-input"
+                ]
+              }
+            },
             "metadata": {
               "editorItemColor": "#404040"
             },
@@ -1423,96 +1442,61 @@
                 "metadata": {}
               },
               "description": null
-            },
-            "condition": {
-              "name": "eq",
-              "data": [
-                {
-                  "num": 1,
-                  "dtype": "num"
-                },
-                {
-                  "num": 2,
-                  "dtype": "num"
-                }
-              ],
-              "metadata": {
-                "slotTypes": [
-                  "number-input",
-                  "number-input"
-                ]
-              }
             }
           },
           {
+            "id": "000000000000000000000000",
             "key": "weekly.HS.Testing_v2",
             "metadata": {
               "editorItemColor": "#4d7c0f"
             },
             "components": {
               "role": "root",
-              "order": {
-                "name": "sequential"
-              },
+              "key": "",
+              "content": null,
               "items": [
                 {
                   "role": "title",
+                  "key": "",
                   "content": [
                     {
                       "code": "en",
                       "parts": [
                         {
+                          "dtype": "",
                           "str": "Because of your symptoms, did you use testing at home or were you tested in any health services in relation to these symptoms?"
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "description": null
                 },
                 {
-                  "key": "rg",
                   "role": "responseGroup",
+                  "key": "rg",
+                  "content": null,
                   "items": [
                     {
-                      "key": "mcg",
                       "role": "multipleChoiceGroup",
+                      "key": "mcg",
+                      "content": null,
                       "items": [
                         {
-                          "key": "0",
                           "role": "option",
-                          "disabled": {
-                            "name": "responseHasOnlyKeysOtherThan",
-                            "data": [
-                              {
-                                "dtype": "str",
-                                "str": "weekly.HS.Testing_v2"
-                              },
-                              {
-                                "dtype": "str",
-                                "str": "rg.mcg"
-                              },
-                              {
-                                "dtype": "str",
-                                "str": "0"
-                              }
-                            ],
-                            "metadata": {}
-                          },
+                          "key": "0",
                           "content": [
                             {
                               "code": "en",
                               "parts": [
                                 {
+                                  "dtype": "",
                                   "str": "No, I have not been tested"
                                 }
                               ]
                             }
-                          ]
-                        },
-                        {
-                          "key": "1",
-                          "role": "option",
+                          ],
                           "disabled": {
-                            "name": "responseHasKeysAny",
+                            "name": "responseHasOnlyKeysOtherThan",
                             "data": [
                               {
                                 "dtype": "str",
@@ -1525,32 +1509,26 @@
                               {
                                 "dtype": "str",
                                 "str": "0"
-                              },
-                              {
-                                "dtype": "str",
-                                "str": "6"
-                              },
-                              {
-                                "dtype": "str",
-                                "str": "7"
                               }
                             ],
                             "metadata": {}
                           },
+                          "description": null
+                        },
+                        {
+                          "role": "option",
+                          "key": "1",
                           "content": [
                             {
                               "code": "en",
                               "parts": [
                                 {
+                                  "dtype": "",
                                   "str": "Yes, I tested positive for COVID-19"
                                 }
                               ]
                             }
-                          ]
-                        },
-                        {
-                          "key": "2",
-                          "role": "option",
+                          ],
                           "disabled": {
                             "name": "responseHasKeysAny",
                             "data": [
@@ -1577,20 +1555,22 @@
                             ],
                             "metadata": {}
                           },
+                          "description": null
+                        },
+                        {
+                          "role": "option",
+                          "key": "2",
                           "content": [
                             {
                               "code": "en",
                               "parts": [
                                 {
+                                  "dtype": "",
                                   "str": "Yes, I tested positive for Flu"
                                 }
                               ]
                             }
-                          ]
-                        },
-                        {
-                          "key": "3",
-                          "role": "option",
+                          ],
                           "disabled": {
                             "name": "responseHasKeysAny",
                             "data": [
@@ -1617,20 +1597,22 @@
                             ],
                             "metadata": {}
                           },
+                          "description": null
+                        },
+                        {
+                          "role": "option",
+                          "key": "3",
                           "content": [
                             {
                               "code": "en",
                               "parts": [
                                 {
+                                  "dtype": "",
                                   "str": "Yes, I tested positive for RSV"
                                 }
                               ]
                             }
-                          ]
-                        },
-                        {
-                          "key": "5",
-                          "role": "option",
+                          ],
                           "disabled": {
                             "name": "responseHasKeysAny",
                             "data": [
@@ -1657,20 +1639,64 @@
                             ],
                             "metadata": {}
                           },
+                          "description": null
+                        },
+                        {
+                          "role": "option",
+                          "key": "5",
                           "content": [
                             {
                               "code": "en",
                               "parts": [
                                 {
+                                  "dtype": "",
                                   "str": "Yes, I tested positive for another infection"
                                 }
                               ]
                             }
-                          ]
+                          ],
+                          "disabled": {
+                            "name": "responseHasKeysAny",
+                            "data": [
+                              {
+                                "dtype": "str",
+                                "str": "weekly.HS.Testing_v2"
+                              },
+                              {
+                                "dtype": "str",
+                                "str": "rg.mcg"
+                              },
+                              {
+                                "dtype": "str",
+                                "str": "0"
+                              },
+                              {
+                                "dtype": "str",
+                                "str": "6"
+                              },
+                              {
+                                "dtype": "str",
+                                "str": "7"
+                              }
+                            ],
+                            "metadata": {}
+                          },
+                          "description": null
                         },
                         {
-                          "key": "6",
                           "role": "option",
+                          "key": "6",
+                          "content": [
+                            {
+                              "code": "en",
+                              "parts": [
+                                {
+                                  "dtype": "",
+                                  "str": "Yes, I was tested but the result was negative"
+                                }
+                              ]
+                            }
+                          ],
                           "disabled": {
                             "name": "responseHasOnlyKeysOtherThan",
                             "data": [
@@ -1689,20 +1715,22 @@
                             ],
                             "metadata": {}
                           },
+                          "description": null
+                        },
+                        {
+                          "role": "option",
+                          "key": "7",
                           "content": [
                             {
                               "code": "en",
                               "parts": [
                                 {
-                                  "str": "Yes, I was tested but the result was negative"
+                                  "dtype": "",
+                                  "str": "Don't know/can't remember"
                                 }
                               ]
                             }
-                          ]
-                        },
-                        {
-                          "key": "7",
-                          "role": "option",
+                          ],
                           "disabled": {
                             "name": "responseHasOnlyKeysOtherThan",
                             "data": [
@@ -1721,38 +1749,68 @@
                             ],
                             "metadata": {}
                           },
-                          "content": [
+                          "description": null
+                        }
+                      ],
+                      "order": {
+                        "name": "sequential"
+                      },
+                      "description": null
+                    }
+                  ],
+                  "description": null
+                },
+                {
+                  "role": "subtitle",
+                  "key": "",
+                  "content": [
+                    {
+                      "code": "en",
+                      "parts": [
+                        {
+                          "dtype": "",
+                          "str": "Please select all that apply"
+                        }
+                      ]
+                    }
+                  ],
+                  "description": null
+                },
+                {
+                  "role": "helpGroup",
+                  "key": "",
+                  "content": null,
+                  "items": [
+                    {
+                      "role": "helpGroup",
+                      "key": "",
+                      "content": [
+                        {
+                          "code": "en",
+                          "parts": [
                             {
-                              "code": "en",
-                              "parts": [
-                                {
-                                  "str": "Don't know/can't remember"
-                                }
-                              ]
+                              "dtype": "",
+                              "str": "**Why are we asking this?**   Respiratory infections can present with similar symptoms. It is helpful to understand what may be causing your symptoms. \n\n**How should I answer it?** \n\nIf you were tested and the result was negative, please select “Yes, I was tested but the result was negative”. If your test result was positive, please select the relevant option depending on your result. If you were not tested, please select “No, I have not been tested”."
                             }
                           ]
                         }
                       ],
                       "order": {
                         "name": "sequential"
-                      }
+                      },
+                      "description": null
                     }
-                  ]
-                },
-                {
-                  "role": "subtitle",
-                  "content": [
-                    {
-                      "code": "en",
-                      "parts": [
-                        {
-                          "str": "Please select all that apply"
-                        }
-                      ]
-                    }
-                  ]
+                  ],
+                  "order": {
+                    "name": "sequential"
+                  },
+                  "description": null
                 }
-              ]
+              ],
+              "order": {
+                "name": "sequential"
+              },
+              "description": null
             }
           },
           {
@@ -2516,12 +2574,12 @@
                     "name": "eq",
                     "data": [
                       {
-                        "num": 1,
-                        "dtype": "num"
+                        "dtype": "num",
+                        "num": 1
                       },
                       {
-                        "num": 2,
-                        "dtype": "num"
+                        "dtype": "num",
+                        "num": 2
                       }
                     ],
                     "metadata": {
@@ -3222,8 +3280,19 @@
                               "description": null
                             },
                             {
-                              "key": "6",
                               "role": "option",
+                              "key": "6",
+                              "content": [
+                                {
+                                  "code": "en",
+                                  "parts": [
+                                    {
+                                      "dtype": "",
+                                      "str": "Pharmacy"
+                                    }
+                                  ]
+                                }
+                              ],
                               "disabled": {
                                 "name": "responseHasKeysAny",
                                 "data": [
@@ -3246,16 +3315,7 @@
                                 ],
                                 "metadata": {}
                               },
-                              "content": [
-                                {
-                                  "code": "en",
-                                  "parts": [
-                                    {
-                                      "str": "Pharmacy"
-                                    }
-                                  ]
-                                }
-                              ]
+                              "description": null
                             },
                             {
                               "role": "option",
@@ -3485,36 +3545,32 @@
                 "id": "000000000000000000000000",
                 "key": "weekly.HS.contact.Q7b",
                 "condition": {
-                  "name": "responseHasOnlyKeysOtherThan",
+                  "name": "responseHasKeysAny",
                   "data": [
                     {
-                      "str": "weekly.HS.contact.Q7",
-                      "dtype": "str"
+                      "dtype": "str",
+                      "str": "weekly.HS.contact.Q7"
                     },
                     {
-                      "str": "rg.mcg",
-                      "dtype": "str"
+                      "dtype": "str",
+                      "str": "rg.mcg"
                     },
                     {
-                      "str": "0",
-                      "dtype": "str"
+                      "dtype": "str",
+                      "str": "1"
                     },
                     {
-                      "str": "5",
-                      "dtype": "str"
+                      "dtype": "str",
+                      "str": "2"
                     },
                     {
-                      "str": "4",
-                      "dtype": "str"
-                    },
-                    {
-                      "str": "6",
-                      "dtype": "str"
+                      "dtype": "str",
+                      "str": "3"
                     }
                   ],
                   "metadata": {
                     "slotTypes": [
-                      "item-key-slot-key-options-generic"
+                      "item-key-slot-key-options-multiple-choice"
                     ]
                   }
                 },
@@ -3955,7 +4011,7 @@
                                   "parts": [
                                     {
                                       "dtype": "",
-                                      "str": "Hospital accident & department/out of hours service"
+                                      "str": "Hospital A&E department/out of hours service"
                                     }
                                   ]
                                 }
@@ -4644,7 +4700,7 @@
                           "parts": [
                             {
                               "dtype": "",
-                              "str": "Because of your symptoms, did you contact via TELEPHONE or INTERNET any medical services?"
+                              "str": "Because of your symptoms, did you contact any medical services via TELEPHONE or INTERNET?"
                             }
                           ]
                         }
@@ -4811,6 +4867,7 @@
                                   "code": "en",
                                   "parts": [
                                     {
+                                      "dtype": "",
                                       "str": "NHS 111 / NHS 24 telephone services"
                                     }
                                   ]
@@ -4844,6 +4901,7 @@
                                   "code": "en",
                                   "parts": [
                                     {
+                                      "dtype": "",
                                       "str": "Online NHS Services (including online 111 service)"
                                     }
                                   ]
@@ -4987,12 +5045,12 @@
                         "name": "eq",
                         "data": [
                           {
-                            "num": 1,
-                            "dtype": "num"
+                            "dtype": "num",
+                            "num": 1
                           },
                           {
-                            "num": 2,
-                            "dtype": "num"
+                            "dtype": "num",
+                            "num": 2
                           }
                         ],
                         "metadata": {
@@ -6905,7 +6963,7 @@
                               "parts": [
                                 {
                                   "dtype": "",
-                                  "str": "Pain killers (e.g. paracetamol including Lemsip and Calpol, ibuprofen, aspirin, etc)"
+                                  "str": "Painkillers (e.g. paracetamol including Lemsip and Calpol, ibuprofen, aspirin, etc)"
                                 }
                               ]
                             }
@@ -6942,6 +7000,7 @@
                               "code": "en",
                               "parts": [
                                 {
+                                  "dtype": "",
                                   "str": "Cough syrup/medicine (e.g. expectorants)"
                                 }
                               ]
@@ -7017,6 +7076,7 @@
                               "code": "en",
                               "parts": [
                                 {
+                                  "dtype": "",
                                   "str": "COVID-19 medical treatments such as Paxlovid"
                                 }
                               ]
@@ -7123,8 +7183,19 @@
                           "description": null
                         },
                         {
-                          "key": "10",
                           "role": "option",
+                          "key": "10",
+                          "content": [
+                            {
+                              "code": "en",
+                              "parts": [
+                                {
+                                  "dtype": "",
+                                  "str": "Traditional Chinese medicine (TCM)"
+                                }
+                              ]
+                            }
+                          ],
                           "disabled": {
                             "name": "responseHasKeysAny",
                             "data": [
@@ -7147,16 +7218,7 @@
                             ],
                             "metadata": {}
                           },
-                          "content": [
-                            {
-                              "code": "en",
-                              "parts": [
-                                {
-                                  "str": "Traditional Chinese medicine (TCM)"
-                                }
-                              ]
-                            }
-                          ]
+                          "description": null
                         },
                         {
                           "role": "option",
@@ -7861,12 +7923,12 @@
                     "name": "eq",
                     "data": [
                       {
-                        "num": 1,
-                        "dtype": "num"
+                        "dtype": "num",
+                        "num": 1
                       },
                       {
-                        "num": 2,
-                        "dtype": "num"
+                        "dtype": "num",
+                        "num": 2
                       }
                     ],
                     "metadata": {
@@ -8219,7 +8281,7 @@
                       "parts": [
                         {
                           "dtype": "",
-                          "str": "**Why are we asking this?**   \nRespiratory infections can spread via social contacts. Measuring how we meet each other helps understand and predict outbreaks and transmission. \n**How should I answer it?** \nTry to think how many people you came across yesterday as best you can."
+                          "str": "**Why are we asking this?**\n\nRespiratory infections can spread via social contacts. Measuring how we meet each other helps understand and predict outbreaks and transmission. \n\n**How should I answer it?** \n\nTry to think how many people you came across yesterday as best you can."
                         }
                       ]
                     }
@@ -8232,8 +8294,7 @@
                 }
               ],
               "order": {
-                "name": "sequential",
-                "metadata": {}
+                "name": "sequential"
               },
               "description": null
             }
@@ -9247,5 +9308,6 @@
       "name": "sequential",
       "metadata": {}
     }
-  }
+  },
+  "versionId": "26-09-11"
 }
