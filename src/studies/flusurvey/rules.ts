@@ -13,8 +13,8 @@ const entryRules: Expression[] = [
 
 const genderQuestionKey = 'intake.Q1';
 
-const IS_SUMMER_PAUSE = true;
-
+// IF falls back to its else action when the variable is missing or unavailable.
+const isSummerPause = StudyEngine.getStudyVariable.boolean('isSummerPause');
 
 /**
  * Define what should happen, when persons submit a survey:
@@ -27,7 +27,11 @@ const handleIntake = StudyEngine.ifThen(
     StudyEngine.not(
       StudyEngine.participantState.hasSurveyKeyAssigned(surveyKeys.weekly)
     ),
-    StudyEngine.participantActions.assignedSurveys.add(surveyKeys.weekly, IS_SUMMER_PAUSE ? 'optional' : 'prio')
+    StudyEngine.if(
+      isSummerPause,
+      StudyEngine.participantActions.assignedSurveys.add(surveyKeys.weekly, 'optional'),
+      StudyEngine.participantActions.assignedSurveys.add(surveyKeys.weekly, 'prio')
+    )
   ),
 
   StudyEngine.participantActions.assignedSurveys.add(surveyKeys.intake, 'optional'),
@@ -81,10 +85,13 @@ const handleWeekly = StudyEngine.ifThen(
   StudyEngine.checkSurveyResponseKey(surveyKeys.weekly),
   // then do:
   StudyEngine.participantActions.assignedSurveys.remove(surveyKeys.weekly, 'all'),
-  StudyEngine.participantActions.assignedSurveys.add(surveyKeys.weekly,
-    IS_SUMMER_PAUSE ? 'optional' : 'prio', StudyEngine.timestampWithOffset({
-      minutes: 60,
-    })),
+  StudyEngine.if(
+    isSummerPause,
+    StudyEngine.participantActions.assignedSurveys.add(surveyKeys.weekly, 'optional',
+      StudyEngine.timestampWithOffset({ minutes: 60 })),
+    StudyEngine.participantActions.assignedSurveys.add(surveyKeys.weekly, 'prio',
+      StudyEngine.timestampWithOffset({ minutes: 60 }))
+  ),
   // Manage flags:
   StudyEngine.if(
     // if has ongoing symptoms:

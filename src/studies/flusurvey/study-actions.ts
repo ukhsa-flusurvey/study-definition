@@ -83,10 +83,11 @@ export const init_has_intake_this_season = () => {
     name: 'init_has_intake_this_season',
     rules: [
       StudyEngine.ifThen(
-        StudyEngine.lt(
+        StudyEngine.lte(
           StudyEngine.timestampWithOffset(
             { days: 0 },
-            1759276800
+            // 1 October 2026, 00:00 Europe/London (BST).
+            1790809200
           ),
           StudyEngine.participantState.getLastSubmissionDate(surveyKeys.intake),
         ),
